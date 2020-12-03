@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="kevin capoccetti">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Oscar, nanar, film nul, parodie, election de nanars,navets">
+    <meta name="description" content="Un nanar est, dans le langage familier, un film qui possède tellement de défauts qu'il en devient involontairement ridicule et comique. Sur cette page web vous aurez l'occasion de votez pour l'un de ces chef-d'oeuvres.">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alatsi|Marvel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alatsi&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/media.css">
+	<title>Election des nanars</title>
+</head>
+<body>
+	<div class="container">
+    <header>
+    <h1>L'OSCAR <span class="opac">DES NANARS</span></h1>
+    <nav>   
+        <a href=""><p>Soumettre un Film</p></a>
+        <ul>
+            <a href="" class="realisateur"><li>Réalisateurs</li></a>
+            <a href="" class="acteur"><li>Acteurs</li></a>
+            <a href="" class="annee"><li>Années</li></a>
+            <a href="" class="genres"><li>Genres</li></a>
+            <a href="" class="resultat"><li>Résultats</li></a>
+        </ul>
+    </nav>  
+    </header><!--mon header contient une frise le titre et un menu-->
+    <aside>
+        <article class="article1">
+            <h3>Les plus populaires</h3>
+            <img onclick="descriptifTomateTueuses()" src="images/Tomates_tueuses.jpg" alt="photo_des_tomates_tueuses" title="Les tomates tueuses">
+            <img onclick="descriptifQueenKong()" src="images/QueenKong.jpg" alt="photo_de_queen-kong" title="Queen kong"><br/>
+            <img onclick="descriptifMoussaka()" src="images/Moussaka.jpg" alt="photo_de_l'attaque_de_la_moussaka_geante" title="L'attaque de la moussaka géante">
+            <img onclick="descriptifSharktopus()" src="images/Sharktopus.jpg" alt="photo_sharktopus" title="Sharktopus"><br/><div class="plusInvisible"><a href=""><h3>PLUS...</h3></a></div>
+        </article>
+        <article class="article2">
+            <h3>Les derniers ajouts</h3>
+            <img onclick="descriptifAbbottCostello()" src="images/AbbottCostello.jpg" alt="photo_du_film_AbbottCostello" title="Abbott Costello">
+            <img onclick="descriptifPlan9()" src="images/Plan9.jpg" alt="photo_du_film_Plan9" title="Plan9"><br/>
+            <img onclick="descriptifRoom()" src="images/Room.jpg" alt="photo_du_film_Room" title="Room">
+            <img onclick="descriptifTerreurCannibale()" src="images/TerreurCannibale.jpg" alt="photo_du_film_TerreurCannibale" title="TerreurCannibale">
+        </article>
+        <a href="" class="plus"><h3>PLUS...</h3></a>
+    </aside><!--audessus ce trouve la barre latérale gauche contenant les film-->
+    <main class="mainForm">
+    <section class="paraghform">
+        <h1>Le nanar des nanars</h1>
+        <p>Voici venue la dernière chance de votre vie d'élire <span class="nanarUltime">le nanar ultime.</span></p>
+        <p>Cliquez sur une affiche (les vignettes sur le côté) pour présenter les détails du film.</p>
+        <form action="" method="post" onsubmit="Soumettre(event)" >
+            <fieldset>
+                <legend>Détail du film</legend>
+                <div class="detailFilm" id="titreFilm">Titre du film</div>
+                <div class="detailFilm" id="deQuiAnnee">De ...</div>
+                <div class="detailFilm" id="duree">Durée: ...</div>
+                <div class="detailFilm" id="genre">Genre: ...</div>
+                <div class="detailFilm" id="acteur">Avec ...</div>
+            </fieldset>
+            <fieldset>
+                <legend>Vote</legend>
+                <fieldset>
+                    <legend>Meilleur film</legend>
+                    <div class="radio">
+                        <label for="radio0"></label>
+                        <p><input type="radio" id="radio0" class="radio0" name="recupInfo" value="0" checked="checked">0</p>
+                        <label for="radio1"></label>
+                        <p><input type="radio" id="radio1" class="radio1" name="recupInfo" value="1">1</p>
+                        <label for="radio2"></label>
+                        <p><input type="radio" id="radio2" class="radio2" name="recupInfo" value="2">2</p>
+                        <label for="radio3"></label>
+                        <p><input type="radio" id="radio3" class="radio3" name="recupInfo" value="3">3</p>
+                        <label for="radio4"></label>
+                        <p><input type="radio" id="radio4" class="radio4" name="recupInfo" value="4">4</p>
+                        <label for="radio5"></label>
+                        <p><input type="radio" id="radio5" class="radio5" name="recupInfo" value="5">5</p>
+                    </div>    
+                </fieldset>
+                <div class="interpretation">
+                    <p><label for="interpretation">Interprétation</label>    
+                <select class="interpretation" id="interpretation" name="recupInfo">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                </select></p>
+                </div>
+                <div class="miseScene">
+                    <p><label for="miseScene"> Mise en scène</label>
+                    <input type="number" placeholder="0" min="0" max="5" class="miseScene" id="miseScene" name="recupInfo" value=""></p>
+                </div>
+                    <p class="scenario"><label for="scenario">Scénario</label>
+                    <input type="range" min="0" max="5" step="1" class="scenario" id="scenario" name="recupInfo" value="0" onchange="slideVarial()"></p>
+                <div class="range0" id="rangeValu">0</div>
+                <div class="commentaire">
+                    <p><label for="Commentaires">Commentaires</label>
+                    <textarea class="txtare" placeholder="Vous pouvez laisser un commentaire." length="150" name="recupInfo"></textarea></p>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>A votre sujet</legend>
+                <div class="nom">
+                    <p><label for="nom">Nom</label>
+                    <input type="text" placeholder="Sawyer" length="28" id="nom" class="nom" name="recupInfo" value="" required></p>
+                </div>
+                <div class="prenom">
+                    <p><label for="prenom">Prénom</label>
+                    <input type="text" placeholder="Tom" length="28" id="prenom" class="prenom" name="recupInfo" value=""></p>
+                </div>
+                <div class="age">
+                    <p><label for="age">Âge</label>
+                    <input type="number" min="5" max="128" length="28" id="age" class="age" name="recupInfo" value="99" required></p>
+                </div>
+                <div class="mail">
+                    <p><label for="mail">E-mail</label>
+                    <input type="text" placeholder="jociate.triphaine@mail.com" length="28" id="mail" class="mail" name="recupInfo" value=""></p>
+                </div>
+                <div class="adresseWeb">
+                    <p><label for="adresseWeb">Adresse web</label>
+                    <input type="url" placeholder="https://example.com" length="28" id="adresseWeb" class="adresseWeb" name="recupInfo" value="" required></p>
+                </div>
+            </fieldset>
+            <div class="boutonForm">
+                    <input type="submit" class="boutonF1" id="boutonF1" name="submit" value="SOUMETTRE">
+                    <input type="reset" onclick="annuler()" class="boutonF2" id="boutonF2" name="reset" value="ANNULER">
+                </div>
+        </form>  
+    </section>
+    </main><!--Le main contient un formulaire qui aura pour but de recevoir des infos au  click d'un film ainsi que de r'envoyé les donnée rentré dans une boite de dialogue.-->
+    <footer>
+        <p>Note:votez que pour les films que vous avez vu.</p>
+    </footer><!--au dessus se trouve le footer avec une brève note-->   
+</div>
+<script src="main.js"></script>	
+</body>
+</html>
